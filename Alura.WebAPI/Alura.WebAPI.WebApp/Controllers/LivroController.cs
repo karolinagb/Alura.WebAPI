@@ -7,6 +7,7 @@ using System.Net.Http;
 using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Alura.ListaLeitura.HttpClients;
 
 namespace Alura.ListaLeitura.WebApp.Controllers
 {
@@ -14,10 +15,12 @@ namespace Alura.ListaLeitura.WebApp.Controllers
     public class LivroController : Controller
     {
         private readonly IRepository<Livro> _repo;
+        private readonly LivroApiClient _api;
 
-        public LivroController(IRepository<Livro> repository)
+        public LivroController(IRepository<Livro> repo, LivroApiClient api)
         {
-            _repo = repository;
+            _repo = repo;
+            _api = api;
         }
 
         [HttpGet]
@@ -39,12 +42,9 @@ namespace Alura.ListaLeitura.WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult ImagemCapa(int id)
+        public async Task<IActionResult> ImagemCapa(int id)
         {
-            byte[] img = _repo.All
-                .Where(l => l.Id == id)
-                .Select(l => l.ImagemCapa)
-                .FirstOrDefault();
+            byte[] img = await _api.GetCapaLivroAsync(id);
             if (img != null)
             {
                 return File(img, "image/png");
@@ -55,23 +55,8 @@ namespace Alura.ListaLeitura.WebApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Detalhes(int id)
         {
-            //Qual uri que eu vou usar para pegar o recurso
-            //http://localhost:6000/api/livros/{id}
-
-            //Classe para encapisular requisições Http:
-            HttpClient httpClient = new HttpClient();
-
-            //Reproveitando o início da rota que é igual para todos, guardando na classe HttpClient na propriedade BaseAddress
-            httpClient.BaseAddress = new Uri("http://localhost:6000/api/");
-            
-            //Para fazer o get:
-            HttpResponseMessage response = await httpClient.GetAsync($"livros/{id}");
-
-            //Verificando o status code
-            response.EnsureSuccessStatusCode(); //Se tiver na família 200 ele não faz nada, se não tiver ele gera uma exceção
-
             //Lendo a resposta e convertendo para um tipo
-            var model = JsonConvert.DeserializeObject<LivroApi>(await response.Content.ReadAsStringAsync());
+            var model = await _api.GetLivroAsync(id);
 
 
             if (model == null)

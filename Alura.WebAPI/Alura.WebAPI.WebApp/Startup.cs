@@ -1,4 +1,5 @@
-﻿using Alura.ListaLeitura.Modelos;
+﻿using Alura.ListaLeitura.HttpClients;
+using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Alura.ListaLeitura.Seguranca;
 using Alura.WebAPI.WebApp.Formatters;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Alura.ListaLeitura.WebApp
 {
@@ -51,6 +53,11 @@ namespace Alura.ListaLeitura.WebApp
             services.Configure<IISServerOptions>(options =>
             {
                 options.AllowSynchronousIO = true;
+            });
+
+            services.AddHttpClient<LivroApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("http://localhost:6000/api/");
             });
 
             services.AddMvc(options =>
