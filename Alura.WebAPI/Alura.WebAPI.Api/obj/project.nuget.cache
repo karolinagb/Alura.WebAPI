@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q+sUv+oIWFqGVczplYSnTUAr/+SmHR1GHU62OsB+aFyOBgfWtCjysLSdiDvTZ6JyZ4VTVzdCawbUBwLp4KQiCw==",
+  "dgSpecHash": "fThU0o139fKu6XP4f3i09Y/KJuGCbJjFTIOHnYQnD6MBcnqGiJ1+EYLbG7kIx8ur8lg/r59A/I+CoLnqnYfaxA==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Api\\Alura.WebAPI.Api.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.Api\\Alura.WebAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",

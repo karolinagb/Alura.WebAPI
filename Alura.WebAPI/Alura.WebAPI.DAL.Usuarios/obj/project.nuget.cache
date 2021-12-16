@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/JFzQBe3tP2j32ESNnB9lAbiuUXkLpceHlvnD/YBlJo4AJYxi6ROBenhiWzNn9Tt9T5CQffa5pG3xgMU6Elw+A==",
+  "dgSpecHash": "/W6ViEyRXRs8MpgYPrS3Lbg2qH8Py5Kv1ionXij2c5DogG0809vFv5D47VuTGsf+0huaaOhU3mtQKJFikh9ptg==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.12\\microsoft.aspnetcore.cryptography.keyderivation.5.0.12.nupkg.sha512",

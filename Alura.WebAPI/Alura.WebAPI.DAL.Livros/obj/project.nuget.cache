@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LOn0PtDE7pEknB4f2R40YwsR+MwdcY93oofpZ6G1PLN0smbI6sJoDDPkokXqF8c/CgvI8SHxM8NxGJzibNXeew==",
+  "dgSpecHash": "oSZuHqiLs1EKkf7YsGtBDnE41+d6XDCKy6JAHWY7K20X4ef3fF+XBtwnQdHSYek0EU6RolKGDpSKD1j+Rtz0Dw==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q1zQ0hu6FADSNOsnI43ZChaJwwK9fvZP0iq3sQvOp36V5KOCyFmXNaY0c1ThKL8hsMxd4QwYg81EzoJyn9NSfA==",
+  "dgSpecHash": "YcoAT+giVbcTQBCO5pvJeZY5k/NbHHaep13xVN99tc5zNIXSiBivONP+w3GidEpuoxTT2tFO3HhqbeRuapIj/g==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\AluraWeAPI.AuthProvider\\AluraWeAPI.AuthProvider.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\AluraWeAPI.AuthProvider\\AluraWeAPI.AuthProvider.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",

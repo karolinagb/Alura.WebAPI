@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9KFPpBPPVLF4NjZqqSxjdWaweWWVjqr3CweF8bhS0xd+jgBxvELiWXJnPcWiPRHoiYcXfQaNeG3UDOmljJ5oEQ==",
+  "dgSpecHash": "iWYkNizMupr10aOFunyacO4se4xbnEduavb3t9wLkvUvQVFWkGPRcF+Q5TKXSYa5Od3qmeBNyANt/x2kqvQV8w==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.0\\microsoft.identitymodel.logging.6.15.0.nupkg.sha512",

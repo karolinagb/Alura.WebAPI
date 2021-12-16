@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B2s+AbqqhAXeUE2gHeAKXeaFP+rKCPMHCbTXt/M2fGjdzNcUqxhTcjy76wyYmOuKcc18hjtrnMt+aOwujWDuTw==",
+  "dgSpecHash": "Zel/JEMgJgUDkjDYMp4R/oUKYtHG5EpvPRqsOgKV39esTNEqj89W8u+PmEDI+xuEWIR3O1aT4CnM30K/mQ+kyQ==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\Alura.WebAPI.ProjetoInicial\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
+  "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

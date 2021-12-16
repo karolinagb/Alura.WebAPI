@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class LivrosController : ControllerBase

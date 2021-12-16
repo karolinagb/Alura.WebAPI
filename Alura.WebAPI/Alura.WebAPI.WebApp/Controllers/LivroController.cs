@@ -3,6 +3,10 @@ using Alura.ListaLeitura.Persistencia;
 using Alura.ListaLeitura.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Alura.ListaLeitura.WebApp.Controllers
 {
@@ -49,14 +53,33 @@ namespace Alura.ListaLeitura.WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detalhes(int id)
+        public async Task<IActionResult> Detalhes(int id)
         {
-            var model = _repo.Find(id);
+            //Qual uri que eu vou usar para pegar o recurso
+            //http://localhost:6000/api/livros/{id}
+
+            //Classe para encapisular requisições Http:
+            HttpClient httpClient = new HttpClient();
+
+            //Reproveitando o início da rota que é igual para todos, guardando na classe HttpClient na propriedade BaseAddress
+            httpClient.BaseAddress = new Uri("http://localhost:6000/api/");
+            
+            //Para fazer o get:
+            HttpResponseMessage response = await httpClient.GetAsync($"livros/{id}");
+
+            //Verificando o status code
+            response.EnsureSuccessStatusCode(); //Se tiver na família 200 ele não faz nada, se não tiver ele gera uma exceção
+
+            //Lendo a resposta e convertendo para um tipo
+            var model = JsonConvert.DeserializeObject<LivroApi>(await response.Content.ReadAsStringAsync());
+
+
             if (model == null)
             {
                 return NotFound();
             }
-            return View(model.ToModel());
+
+            return View(model.ToUpload());
         }
 
         [HttpPost]
