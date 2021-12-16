@@ -1,0 +1,12 @@
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\bin\Debug\net5.0\Alura.WebAPI.Model.deps.json
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\bin\Debug\net5.0\Alura.WebAPI.Model.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\bin\Debug\net5.0\ref\Alura.WebAPI.Model.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\bin\Debug\net5.0\Alura.WebAPI.Model.pdb
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.csproj.AssemblyReference.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.AssemblyInfoInputs.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.AssemblyInfo.cs
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.csproj.CoreCompileInputs.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\ref\Alura.WebAPI.Model.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Model\obj\Debug\net5.0\Alura.WebAPI.Model.pdb

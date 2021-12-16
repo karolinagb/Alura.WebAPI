@@ -1,0 +1,12 @@
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\bin\Debug\net5.0\Alura.WebAPI.Seguranca.deps.json
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\bin\Debug\net5.0\Alura.WebAPI.Seguranca.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\bin\Debug\net5.0\ref\Alura.WebAPI.Seguranca.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\bin\Debug\net5.0\Alura.WebAPI.Seguranca.pdb
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.csproj.AssemblyReference.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.GeneratedMSBuildEditorConfig.editorconfig
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.AssemblyInfoInputs.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.AssemblyInfo.cs
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.csproj.CoreCompileInputs.cache
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\ref\Alura.WebAPI.Seguranca.dll
+C:\projetos\Alura.WebAPI.ProjetoInicial\Alura.WebAPI\Alura.WebAPI.Seguranca\obj\Debug\net5.0\Alura.WebAPI.Seguranca.pdb
