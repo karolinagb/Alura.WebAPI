@@ -36,5 +36,12 @@ namespace Alura.ListaLeitura.HttpClients
 
             return objeto;
         }
+
+        public async Task DeleteLivroAsync(int id)
+        {
+            var resposta = await _httpClient.DeleteAsync("livros/{id}");
+            resposta.EnsureSuccessStatusCode();
+
+        }
     }
 }

@@ -89,14 +89,14 @@ namespace Alura.ListaLeitura.WebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Remover(int id)
+        public async Task<IActionResult> Remover(int id)
         {
-            var model = _repo.Find(id);
+            var model = await _api.GetLivroAsync(id);
             if (model == null)
             {
                 return NotFound();
             }
-            _repo.Excluir(model);
+            await _api.DeleteLivroAsync(id);
             return RedirectToAction("Index", "Home");
         }
 
