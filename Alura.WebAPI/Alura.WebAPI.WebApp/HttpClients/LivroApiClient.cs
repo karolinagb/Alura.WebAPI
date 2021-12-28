@@ -39,9 +39,8 @@ namespace Alura.ListaLeitura.HttpClients
 
         public async Task DeleteLivroAsync(int id)
         {
-            var resposta = await _httpClient.DeleteAsync("livros/{id}");
+            var resposta = await _httpClient.DeleteAsync($"livros/{id}");
             resposta.EnsureSuccessStatusCode();
-
         }
     }
 }
