@@ -31,11 +31,11 @@ namespace Alura.ListaLeitura.WebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Novo(LivroUpload model)
+        public async Task<IActionResult> Novo(LivroUpload model)
         {
             if (ModelState.IsValid)
             {
-                _repo.Incluir(model.ToLivro());
+                await _api.PostLivroAsync(model);
                 return RedirectToAction("Index", "Home");
             }
             return View(model);

@@ -51,7 +51,7 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Incluir([FromBody] LivroUpload model)
+        public IActionResult Incluir([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)
             {
