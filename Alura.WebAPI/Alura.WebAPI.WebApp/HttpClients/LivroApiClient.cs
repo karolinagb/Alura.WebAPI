@@ -1,7 +1,8 @@
 ﻿using Alura.ListaLeitura.Modelos;
+using Alura.ListaLeitura.Seguranca;
 using Newtonsoft.Json;
-using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Lista = Alura.ListaLeitura.Modelos.ListaLeitura;
 
@@ -10,20 +11,34 @@ namespace Alura.ListaLeitura.HttpClients
     public class LivroApiClient
     {
         private readonly HttpClient _httpClient;
+        private readonly AuthApiClient _auth;
 
-        public LivroApiClient(HttpClient httpClient)
+        public LivroApiClient(HttpClient httpClient, AuthApiClient auth)
         {
             _httpClient = httpClient;
+            _auth = auth;
         }
 
         public async Task<Lista> GetListaLeituraAsync(TipoListaLeitura tipo)
         {
+            var token = await _auth.PostLoginAsync(new LoginModel { Login = "Karol", Password = "1234" });
+            
+            //Definir cabeçalhos da requisição
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+
             var resposta = await _httpClient.GetAsync($"ListasLeitura/{tipo}");
             return JsonConvert.DeserializeObject<Lista>(await resposta.Content.ReadAsStringAsync());
         }
 
         public async Task<LivroApi> GetLivroAsync(int id)
         {
+            var token = await _auth.PostLoginAsync(new LoginModel { Login = "Karol", Password = "1234" });
+
+            //Definir cabeçalhos da requisição
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+
             HttpResponseMessage response = await _httpClient.GetAsync($"livros/{id}");
 
             response.EnsureSuccessStatusCode();

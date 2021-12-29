@@ -52,6 +52,11 @@ namespace Alura.ListaLeitura.WebApp
                 client.BaseAddress = new Uri("http://localhost:6000/api/");
             });
 
+            services.AddHttpClient<AuthApiClient>(client => 
+            {
+                client.BaseAddress = new Uri("http://localhost:5000/api/");
+            });
+
             services.AddMvc(options =>
             { 
                 //Adicionando formatos personalizados ao pipeline
