@@ -1,6 +1,8 @@
 ﻿using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Seguranca;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -12,32 +14,33 @@ namespace Alura.ListaLeitura.HttpClients
     {
         private readonly HttpClient _httpClient;
         private readonly AuthApiClient _auth;
+        private readonly IHttpContextAccessor _acessor;
 
-        public LivroApiClient(HttpClient httpClient, AuthApiClient auth)
+        public LivroApiClient(HttpClient httpClient, AuthApiClient auth, IHttpContextAccessor accessor)
         {
             _httpClient = httpClient;
             _auth = auth;
+            _acessor = accessor;
+        }
+
+        private void AddBearerToken()
+        {
+            var token = _acessor.HttpContext.User.Claims.First(c => c.Type == "Token").Value;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
 
         public async Task<Lista> GetListaLeituraAsync(TipoListaLeitura tipo)
         {
-            var token = await _auth.PostLoginAsync(new LoginModel { Login = "Karol", Password = "1234" });
-            
-            //Definir cabeçalhos da requisição
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", token);
+            AddBearerToken();
 
             var resposta = await _httpClient.GetAsync($"ListasLeitura/{tipo}");
+            resposta.EnsureSuccessStatusCode();
             return JsonConvert.DeserializeObject<Lista>(await resposta.Content.ReadAsStringAsync());
         }
 
         public async Task<LivroApi> GetLivroAsync(int id)
         {
-            var token = await _auth.PostLoginAsync(new LoginModel { Login = "Karol", Password = "1234" });
-
-            //Definir cabeçalhos da requisição
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", token);
+            AddBearerToken();
 
             HttpResponseMessage response = await _httpClient.GetAsync($"livros/{id}");
 
