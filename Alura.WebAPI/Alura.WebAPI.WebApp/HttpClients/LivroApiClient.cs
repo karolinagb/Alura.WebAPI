@@ -73,10 +73,28 @@ namespace Alura.ListaLeitura.HttpClients
 
             //Cada campo do formulario vai ser uma parte desse conteúdo
             content.Add(new StringContent(model.Titulo), EnvolveAspasDuplas("titulo"));  //Preciso dizer que esse campo é envolvido com aspas duplas
-            content.Add(new StringContent(model.Subtitulo), EnvolveAspasDuplas("subtitulo"));
-            content.Add(new StringContent(model.Resumo), EnvolveAspasDuplas("resumo"));
-            content.Add(new StringContent(model.Autor), EnvolveAspasDuplas("autor"));
             content.Add(new StringContent(model.Lista.ParaString()), EnvolveAspasDuplas("lista"));
+
+            if (!string.IsNullOrEmpty(model.Subtitulo))
+            {
+                content.Add(new StringContent(model.Subtitulo), EnvolveAspasDuplas("subtitulo"));
+            }
+
+            if (!string.IsNullOrEmpty(model.Resumo))
+            {
+                content.Add(new StringContent(model.Resumo), EnvolveAspasDuplas("resumo"));
+            }
+
+            if (!string.IsNullOrEmpty(model.Autor))
+            {
+                content.Add(new StringContent(model.Autor), EnvolveAspasDuplas("autor"));
+            }
+
+            //Quando eu crio um conteúdo para alteração de um livro eu preciso passar o id do livro
+            if(model.Id > 0)
+            {
+                content.Add(new StringContent(model.Id.ToString()), EnvolveAspasDuplas("id"));
+            }
 
             if(model.Capa != null)
             {
@@ -91,6 +109,14 @@ namespace Alura.ListaLeitura.HttpClients
             }
 
             return content;
+        }
+
+        public async Task PutLivroAsync(LivroUpload model)
+        {
+            HttpContent content = CreateMultipartFormDataContent(model);
+            var resposta = await _httpClient.PutAsync("livros", content);
+            var retorno = resposta.Content.ReadAsStringAsync();
+            resposta.EnsureSuccessStatusCode();
         }
     }
 }

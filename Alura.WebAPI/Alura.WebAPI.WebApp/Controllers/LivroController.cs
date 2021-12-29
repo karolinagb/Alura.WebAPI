@@ -26,7 +26,8 @@ namespace Alura.ListaLeitura.WebApp.Controllers
         [HttpGet]
         public IActionResult Novo()
         {
-            return View(new LivroUpload());
+            var livroUpload = new LivroUpload();
+            return View(livroUpload);
         }
 
         [HttpPost]
@@ -69,19 +70,11 @@ namespace Alura.ListaLeitura.WebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Detalhes(LivroUpload model)
+        public async Task<IActionResult> Detalhes(LivroUpload model)
         {
             if (ModelState.IsValid)
             {
-                var livro = model.ToLivro();
-                if (model.Capa == null)
-                {
-                    livro.ImagemCapa = _repo.All
-                        .Where(l => l.Id == livro.Id)
-                        .Select(l => l.ImagemCapa)
-                        .FirstOrDefault();
-                }
-                _repo.Alterar(livro);
+                await _api.PutLivroAsync(model);
                 return RedirectToAction("Index", "Home");
             }
             return View(model);
