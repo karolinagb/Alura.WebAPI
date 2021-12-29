@@ -83,7 +83,11 @@ namespace Alura.ListaLeitura.HttpClients
                 var imagemContent = new ByteArrayContent(model.Capa.ConvertToBytes());
                 //Um byte nao é um formato especifico, entao temos que definir um formato pro arquivo (image/png ou pdf e etc)
                 imagemContent.Headers.Add("content-type", "image/png");
-                content.Add(imagemContent, EnvolveAspasDuplas("capa"));
+                content.Add(
+                    imagemContent, 
+                    EnvolveAspasDuplas("capa"),
+                    EnvolveAspasDuplas("capa.png")  //Pra fazer upload tem que ter: nome arquivo, tipo do arquivo
+                    );
             }
 
             return content;
