@@ -128,3 +128,8 @@ C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\obj\Debug\net5.0\A
 C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\obj\Debug\net5.0\ref\AluraWeAPI.AuthProvider.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\obj\Debug\net5.0\AluraWeAPI.AuthProvider.pdb
 C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\obj\Debug\net5.0\AluraWeAPI.AuthProvider.genruntimeconfig.cache
+C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\AluraWeAPI.AuthProvider\obj\Debug\net5.0\AluraWeAPI.AuthProvider.MvcApplicationPartsAssemblyInfo.cs
