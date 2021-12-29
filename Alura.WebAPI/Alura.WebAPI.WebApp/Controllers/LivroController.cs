@@ -1,25 +1,19 @@
-﻿using System.Linq;
-using Alura.ListaLeitura.Persistencia;
+﻿using Alura.ListaLeitura.HttpClients;
 using Alura.ListaLeitura.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
-using System;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Alura.ListaLeitura.HttpClients;
 
 namespace Alura.ListaLeitura.WebApp.Controllers
 {
     [Authorize]
     public class LivroController : Controller
     {
-        private readonly IRepository<Livro> _repo;
+
         private readonly LivroApiClient _api;
 
-        public LivroController(IRepository<Livro> repo, LivroApiClient api)
+        public LivroController(LivroApiClient api)
         {
-            _repo = repo;
             _api = api;
         }
 
@@ -94,14 +88,14 @@ namespace Alura.ListaLeitura.WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Recuperar(int id)
+        public async Task<IActionResult> Recuperar(int id)
         {
-            var model = _repo.Find(id);
+            var model = await _api.GetLivroAsync(id);
             if (model == null)
             {
                 return NotFound();
             }
-            return Json(model.ToModel());
+            return Json(model.ToUpload());
         }
     }
 }
