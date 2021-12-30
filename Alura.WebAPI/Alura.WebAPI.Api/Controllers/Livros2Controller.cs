@@ -6,14 +6,14 @@ using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
 {
-    [Authorize]
     [ApiController]
-    [Route("api/v1.0/[controller]")]
-    public class LivrosController : ControllerBase
+    [Route("api/v2.0/livros")]
+    [Authorize]
+    public class Livros2Controller : ControllerBase
     {
         private readonly IRepository<Livro> _repo;
 
-        public LivrosController(IRepository<Livro> repository)
+        public Livros2Controller(IRepository<Livro> repository)
         {
             _repo = repository;
         }
@@ -33,7 +33,7 @@ namespace Alura.ListaLeitura.Api.Controllers
             {
                 return NotFound();
             }
-            return Ok(model.ToApi());
+            return Ok(model);
         }
 
         [HttpGet("{id}/capa")]
@@ -43,7 +43,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 .Where(l => l.Id == id)
                 .Select(l => l.ImagemCapa)
                 .FirstOrDefault();
-            if(img != null)
+            if (img != null)
             {
                 return File(img, "image/png");
             }
