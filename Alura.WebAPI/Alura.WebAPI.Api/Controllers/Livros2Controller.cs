@@ -7,8 +7,10 @@ using System.Linq;
 namespace Alura.ListaLeitura.Api.Controllers
 {
     [ApiController]
-    [Route("api/v2.0/livros")]
+    
     [Authorize]
+    [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class Livros2Controller : ControllerBase
     {
         private readonly IRepository<Livro> _repo;

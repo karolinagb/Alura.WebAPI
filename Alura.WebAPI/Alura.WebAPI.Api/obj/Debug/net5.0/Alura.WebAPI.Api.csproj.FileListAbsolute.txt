@@ -122,3 +122,5 @@ C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.We
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\ref\Alura.WebAPI.Api.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.WebAPI.Api.pdb
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.WebAPI.Api.genruntimeconfig.cache
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.WebAPI.Api.MvcApplicationPartsAssemblyInfo.cs

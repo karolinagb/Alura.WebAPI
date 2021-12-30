@@ -61,6 +61,9 @@ namespace Alura.WebAPI.Api
                 //Adicionando formatos personalizados ao pipeline
                 options.OutputFormatters.Add(new LivroCsvFormatter());
             }).AddXmlSerializerFormatters();
+
+            //Preciso adicionar o suporte de versão da api no midleware da aplicação
+            services.AddApiVersioning();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
