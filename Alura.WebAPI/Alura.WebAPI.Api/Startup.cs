@@ -3,6 +3,7 @@ using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -63,7 +64,17 @@ namespace Alura.WebAPI.Api
             }).AddXmlSerializerFormatters();
 
             //Preciso adicionar o suporte de versão da api no midleware da aplicação
-            services.AddApiVersioning();
+            services.AddApiVersioning(options =>
+            {
+                //Informar qual o leitor da versão
+                //Aqui informo que o leitor vai ser o cabeçalho que vai ler a chave api-version
+                options.ApiVersionReader = ApiVersionReader.Combine
+                    (
+                        //Classes que vao ler a versao
+                        new QueryStringApiVersionReader("api-version"), //query string
+                        new HeaderApiVersionReader("api-version") //header
+                    );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
