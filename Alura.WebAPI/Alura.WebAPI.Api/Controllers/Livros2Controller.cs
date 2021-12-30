@@ -10,8 +10,8 @@ namespace Alura.ListaLeitura.Api.Controllers
 
     [Authorize]
     [ApiVersion("2.0")]
-    //[Route("api/v{version:apiVersion}/[controller]")]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    //[Route("api/[controller]")]
 
     public class Livros2Controller : ControllerBase
     {

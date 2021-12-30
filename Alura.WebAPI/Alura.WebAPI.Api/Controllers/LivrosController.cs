@@ -11,10 +11,10 @@ namespace Alura.ListaLeitura.Api.Controllers
     [Authorize]
     [ApiController]
     [ApiVersion("1.0")]
-    //[Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     //Para suportar o versionamento por query string tiramos o {version} pois por padrão ele ja entende que a versao sera
     //informada na query string
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     public class LivrosController : ControllerBase
     {
         private readonly IRepository<Livro> _repo;
