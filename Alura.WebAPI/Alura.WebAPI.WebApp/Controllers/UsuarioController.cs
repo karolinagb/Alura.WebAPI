@@ -47,14 +47,15 @@ namespace Alura.ListaLeitura.WebApp.Controllers
                     //primeiro vamos criar os direitos/reinvindicações/claims
                     var claims = new List<Claim>
                     {
+                        //Uma claim para dar o nome a essa claim
                         new Claim(ClaimTypes.Name, model.Login),
                         new Claim("Token", result.Token) //em uma claim eu guardo o token!
                     };
 
                     //e guardar esses direitos na identidade principal
                     var claimsIdentity = new ClaimsIdentity(
-                        claims,
-                        CookieAuthenticationDefaults.AuthenticationScheme
+                        claims,  //lista de politicas relacionadas a identidade
+                        CookieAuthenticationDefaults.AuthenticationScheme  //esquema de autenticação
                     );
 
                     var authProp = new AuthenticationProperties
@@ -65,6 +66,7 @@ namespace Alura.ListaLeitura.WebApp.Controllers
                         IsPersistent = true
                     };
 
+                    //Preciso guardar os estados das requisições do usuario entao sera via Cookies
                     //e finalmente autenticar via cookie com essa identidade
                     await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,

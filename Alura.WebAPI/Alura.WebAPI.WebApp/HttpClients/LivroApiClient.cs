@@ -13,19 +13,26 @@ namespace Alura.ListaLeitura.HttpClients
     public class LivroApiClient
     {
         private readonly HttpClient _httpClient;
-        private readonly AuthApiClient _auth;
         private readonly IHttpContextAccessor _acessor;
 
-        public LivroApiClient(HttpClient httpClient, AuthApiClient auth, IHttpContextAccessor accessor)
+        public LivroApiClient(HttpClient httpClient, IHttpContextAccessor accessor)
         {
             _httpClient = httpClient;
-            _auth = auth;
             _acessor = accessor;
         }
 
         private void AddBearerToken()
         {
+            //Dentro de uma action eu tenho acesso ao contexto de uma requisição
+            //HttpContext.User => É o usuario principal associado a esta requisição
+            //HttpContext.User.Claims = esse usuario principal tb tem as politica que adicionamos
+            //Posso usar o linq para pegar esse token
+            //Type é o tipo que definimos nas claims. Estou guardando o token numa variável
+            //A classe HttpContext pertence a classes do framework asp.net core, para acessar
+            //essa classe em outr que nao faz parte do framework, podemos fazer isso atraves
+            //da interface IHttpContextAccessor
             var token = _acessor.HttpContext.User.Claims.First(c => c.Type == "Token").Value;
+            //Codigo para adicionar o cabeçalho de autorização na requisição
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
 
@@ -53,6 +60,8 @@ namespace Alura.ListaLeitura.HttpClients
 
         public async Task<byte[]> GetCapaLivroAsync(int id)
         {
+            AddBearerToken();
+
             HttpResponseMessage response = await _httpClient.GetAsync($"livros/{id}/capa");
 
             response.EnsureSuccessStatusCode();
@@ -64,18 +73,21 @@ namespace Alura.ListaLeitura.HttpClients
 
         public async Task DeleteLivroAsync(int id)
         {
+            AddBearerToken();
+
             var resposta = await _httpClient.DeleteAsync($"livros/{id}");
             resposta.EnsureSuccessStatusCode();
         }
 
         public async Task PostLivroAsync(LivroUpload model)
         {
+            AddBearerToken();
+
             //A classe HttpContent representa conteúdos que serão enviados em requisições
             //HttpContent é um tipo abstrato. Não posso criar objetos a partir dele, posso criar filhos
             //Queremos criar o filho multipart/formdata
             HttpContent content = CreateMultipartFormDataContent(model);
             var resposta = await _httpClient.PostAsync("livros", content);
-            var retorno = resposta.Content.ReadAsStringAsync();
             resposta.EnsureSuccessStatusCode();
         }
 
@@ -131,9 +143,10 @@ namespace Alura.ListaLeitura.HttpClients
 
         public async Task PutLivroAsync(LivroUpload model)
         {
+            AddBearerToken();
+
             HttpContent content = CreateMultipartFormDataContent(model);
             var resposta = await _httpClient.PutAsync("livros", content);
-            var retorno = resposta.Content.ReadAsStringAsync();
             resposta.EnsureSuccessStatusCode();
         }
     }

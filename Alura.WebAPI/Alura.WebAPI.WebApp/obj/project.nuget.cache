@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zvvt1rP7PL2mnP5LQIgNN+0Fpnu3x3bw4t/Ol7IGfywln2TbiXJJEOsShlMJuxxa4BK8wQxgdwIYvA/yUKxgvA==",
+  "dgSpecHash": "oH/Tw1sdH4wOR/pDgt/OUVdy8P1SPvqfU1fHG1RwAdEr+F9zf1qGXHsG8EemzxR3kxfoyROG1CdtZsDeOK1tqQ==",
   "success": true,
   "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,6 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
-    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
-    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.12\\microsoft.aspnetcore.cryptography.keyderivation.5.0.12.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
@@ -19,7 +17,6 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
-    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.12\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.12.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.mvc.formatters.xml\\2.2.0\\microsoft.aspnetcore.mvc.formatters.xml.2.2.0.nupkg.sha512",
@@ -57,8 +54,6 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.12\\microsoft.extensions.identity.core.5.0.12.nupkg.sha512",
-    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.12\\microsoft.extensions.identity.stores.5.0.12.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",

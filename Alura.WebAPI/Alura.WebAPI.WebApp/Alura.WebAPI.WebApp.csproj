@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Alura.WebAPI.DAL.Usuarios\Alura.WebAPI.DAL.Usuarios.csproj" />
     <ProjectReference Include="..\Alura.WebAPI.Model\Alura.WebAPI.Model.csproj" />
     <ProjectReference Include="..\Alura.WebAPI.Seguranca\Alura.WebAPI.Seguranca.csproj" />
   </ItemGroup>
@@ -49,10 +48,6 @@
     <Content Update="Views\_ViewImports.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Api\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
