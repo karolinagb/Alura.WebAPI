@@ -41,6 +41,7 @@ namespace Alura.ListaLeitura.HttpClients
             AddBearerToken();
 
             var resposta = await _httpClient.GetAsync($"ListasLeitura/{tipo}");
+            var retorno = resposta.Content.ReadAsStringAsync();
             resposta.EnsureSuccessStatusCode();
             return JsonConvert.DeserializeObject<Lista>(await resposta.Content.ReadAsStringAsync());
         }

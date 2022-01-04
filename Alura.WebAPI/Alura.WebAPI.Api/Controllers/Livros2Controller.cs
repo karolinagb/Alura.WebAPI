@@ -24,10 +24,11 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro)
+        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao)
         {
             var lista = _repo.All
                 .AplicarFiltro(filtro)
+                .AplicarOrdem(ordenacao)
                 .Select(l => l.ToApi())
                 .ToList();
             return Ok(lista);
