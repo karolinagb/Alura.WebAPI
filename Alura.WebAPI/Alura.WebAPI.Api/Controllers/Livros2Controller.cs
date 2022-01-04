@@ -1,5 +1,6 @@
 ﻿using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
+using Alura.WebAPI.Api.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -23,9 +24,12 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListaDeLivros()
+        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro)
         {
-            var lista = _repo.All.Select(l => l.ToApi()).ToList();
+            var lista = _repo.All
+                .AplicarFiltro(filtro)
+                .Select(l => l.ToApi())
+                .ToList();
             return Ok(lista);
         }
 
