@@ -3,6 +3,7 @@ using Alura.ListaLeitura.Persistencia;
 using Alura.WebAPI.Api.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
@@ -24,7 +25,7 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao, 
+        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao,
             [FromQuery] LivroPaginacao paginacao)
         {
             var livroPaginado = _repo.All

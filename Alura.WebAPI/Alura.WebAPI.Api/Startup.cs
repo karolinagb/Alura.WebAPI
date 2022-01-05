@@ -1,6 +1,7 @@
 using Alura.ListaLeitura.Api.Formatters;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
+using Alura.WebAPI.Api.Filtros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -61,6 +62,8 @@ namespace Alura.WebAPI.Api
             {
                 //Adicionando formatos personalizados ao pipeline
                 options.OutputFormatters.Add(new LivroCsvFormatter());
+                //Informar que estou usando esse filtro de exceções
+                options.Filters.Add(typeof(ErrorResponseFilter));
             }).AddXmlSerializerFormatters();
 
             //Preciso adicionar o suporte de versão da api no midleware da aplicação
