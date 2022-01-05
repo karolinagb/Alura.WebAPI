@@ -4,6 +4,7 @@ using Alura.ListaLeitura.Persistencia;
 using Alura.WebAPI.Api.Filtros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -65,6 +66,13 @@ namespace Alura.WebAPI.Api
                 //Informar que estou usando esse filtro de exceções
                 options.Filters.Add(typeof(ErrorResponseFilter));
             }).AddXmlSerializerFormatters();
+
+            //Mudando a configuração padrão da api do .NET a fim dela não fazer a validação automática do ModelState
+            //Dessa forma conseguimos utilizar a nossa própria validação do ModelState
+            services.Configure<ApiBehaviorOptions>(options => 
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
 
             //Preciso adicionar o suporte de versão da api no midleware da aplicação
             //services.AddApiVersioning(options =>

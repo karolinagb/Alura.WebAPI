@@ -9,7 +9,6 @@ using System.Linq;
 namespace Alura.ListaLeitura.Api.Controllers
 {
     [ApiController]
-
     [Authorize]
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
@@ -71,7 +70,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 var uri = Url.Action("Recuperar", new { id = livro.Id });
                 return Created(uri, livro); //201
             }
-            return BadRequest();
+            return BadRequest(ErrorResponse.FromModelState(ModelState));
         }
 
         [HttpPut]

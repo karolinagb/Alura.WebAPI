@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Alura.WebAPI.Api\Alura.WebAPI.Api.csproj" />
     <ProjectReference Include="..\Alura.WebAPI.DAL.Usuarios\Alura.WebAPI.DAL.Usuarios.csproj" />
     <ProjectReference Include="..\Alura.WebAPI.Seguranca\Alura.WebAPI.Seguranca.csproj" />
   </ItemGroup>
