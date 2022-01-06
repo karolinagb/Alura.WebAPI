@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zFNhNSTvhFNags3/WXp8VUxmeEb7hFaedEPWxtWp0yyfFZxFi9ybH1KMHuxn2dhPX05MZkwnhnHmN0b8xtfLAw==",
+  "dgSpecHash": "wbtjFEO++hppxQJx7zjVxLr45++kC4/KDMlOKBwyICMcMoQsqq3UakvmYCgnnLJaDPS8kcgtOvsIz5XWI6wMuQ==",
   "success": true,
   "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.Api\\Alura.WebAPI.Api.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.2.3\\swashbuckle.aspnetcore.annotations.6.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",

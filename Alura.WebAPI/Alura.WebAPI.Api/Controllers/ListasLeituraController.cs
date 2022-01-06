@@ -2,6 +2,7 @@
 using Alura.ListaLeitura.Persistencia;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System.Linq;
 using Lista = Alura.ListaLeitura.Modelos.ListaLeitura;  //apelidando a classe pra n dar conflito de namespace
@@ -23,7 +24,6 @@ namespace Alura.ListaLeitura.Api.Controllers
             _repo = repo;
         }
 
-        [HttpPost]
         private Lista CriarLista(TipoListaLeitura tipo)
         {
             return new Lista
@@ -34,6 +34,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation(
+                Summary = "Recupera toda as listas com seus livros cadastrados",
+                Description = "Requer que o usuário esteja autorizado. Há livros cadastrados na lista" +
+            "ParaLer, Lendo e Lidos.",
+                OperationId = "ListaLivrosPorLista",
+                Tags = new[] { "Listas" }
+         )]
         public IActionResult TodasListas()
         {
             Lista paraLer = CriarLista(TipoListaLeitura.ParaLer);
@@ -44,6 +51,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet("{tipo}")]
+        [SwaggerOperation(
+                Summary = "Recupera uma determinada lista pelo seu tipo",
+                Description = "Requer que o usuário esteja autorizado. Recupera uma lista informando" +
+            "o tipo dela (ParaLer, Lendo ou Lidos) com seus respectivos livros cadastrados",
+                OperationId = "RecuperaListaPorTipo",
+                Tags = new[] { "Listas" }
+         )]
         public IActionResult Recuperar(TipoListaLeitura tipo)
         {
             var lista = CriarLista(tipo);

@@ -67,6 +67,7 @@ namespace Alura.WebAPI.Api
                 //Esse codigo foi adicionado para resolver ações conflitantes que é quando ações estão
                 //usando a mesma rota
                 //c.ResolveConflictingActions(x => x.First());
+                c.EnableAnnotations();
             });
 
             services.AddMvc(options =>

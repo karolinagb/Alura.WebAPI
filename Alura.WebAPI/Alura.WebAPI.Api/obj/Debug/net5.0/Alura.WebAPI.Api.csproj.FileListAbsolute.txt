@@ -129,3 +129,4 @@ C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsof
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll

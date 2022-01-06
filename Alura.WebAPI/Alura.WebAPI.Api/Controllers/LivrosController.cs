@@ -3,12 +3,13 @@ using Alura.ListaLeitura.Persistencia;
 using Alura.WebAPI.Api.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
 {
 
-    
+
     [Authorize]
     [ApiController]
     [ApiVersion("1.0")]
@@ -29,6 +30,12 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation(
+                Summary = "Lista todos os livros cadastrados",
+                Description = "Requer que o usuário esteja autorizado",
+                OperationId = "ListaLivros",
+                Tags = new[] { "Livros" }
+         )]
         public IActionResult ListaDeLivros()
         {
             var lista = _repo.All.Select(l => l.ToApi()).ToList();
@@ -36,6 +43,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [SwaggerOperation(
+                Summary = "Recupera um livro pelo seu ID",
+                Description = "Requer que o usuário esteja autorizado. Para recuperar um Id de um " +
+            "livro pegue o mesmo na lista de livros do método ListaLivros.",
+                OperationId = "RecuperaPorId",
+                Tags = new[] { "Livros" }
+         )]
         //Podemos dizer o que vai ser retornado no swagger:
         [ProducesResponseType(statusCode: 200, Type = typeof(LivroApi))]
         [ProducesResponseType(statusCode: 500, Type = typeof(ErrorResponse))]
@@ -51,13 +65,20 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet("{id}/capa")]
+        [SwaggerOperation(
+                Summary = "Recupera a capa de um livro de acordo com o ID do mesmo.",
+                Description = "Requer que o usuário esteja autorizado. Para recuperar um Id de um " +
+            "livro pegue o mesmo na lista de livros do método ListaLivros.",
+                OperationId = "RecuperaImagemCapaLivro",
+                Tags = new[] { "Livros" }
+         )]
         public IActionResult ImagemCapa(int id)
         {
             byte[] img = _repo.All
                 .Where(l => l.Id == id)
                 .Select(l => l.ImagemCapa)
                 .FirstOrDefault();
-            if(img != null)
+            if (img != null)
             {
                 return File(img, "image/png");
             }
@@ -65,6 +86,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpPost]
+        [SwaggerOperation(
+                Summary = "Cadastra um livro.",
+                Description = "Requer que o usuário esteja autorizado. Para incluir um livro informe" +
+            "os parâmetros desejados.",
+                OperationId = "IncluiLivro",
+                Tags = new[] { "Livros" }
+         )]
         public IActionResult Incluir([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)
@@ -78,6 +106,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpPut]
+        [SwaggerOperation(
+                Summary = "Faz a edição de um livro.",
+                Description = "Requer que o usuário esteja autorizado. Para editar um livro informe" +
+            "todas as informações do dado que quer alterar juntamente com as alterações desejadas.",
+                OperationId = "AlteraLivro",
+                Tags = new[] { "Livros" }
+         )]
         public IActionResult Alterar([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)
@@ -97,6 +132,13 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(
+                Summary = "Faz a remoção de um livro.",
+                Description = "Requer que o usuário esteja autorizado. Para remover um livro informe" +
+            "seu ID.",
+                OperationId = "RemoveLivro",
+                Tags = new[] { "Livros" }
+         )]
         public IActionResult Remover(int id)
         {
             var model = _repo.Find(id);
