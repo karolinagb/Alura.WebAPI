@@ -62,7 +62,8 @@ namespace Alura.WebAPI.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AluraWebAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AluraWebAPI", Version = "1.0" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "AluraWebAPI", Version = "2.0" });
                 //Esse codigo foi adicionado para resolver ações conflitantes que é quando ações estão
                 //usando a mesma rota
                 c.ResolveConflictingActions(x => x.First());
@@ -116,7 +117,8 @@ namespace Alura.WebAPI.Api
             // Ativa o Swagger UI
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "AluraWebAPIV1");
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Versão 1.0");
+                opt.SwaggerEndpoint("/swagger/v2/swagger.json", "Versão 2.0");
 
             });
 
