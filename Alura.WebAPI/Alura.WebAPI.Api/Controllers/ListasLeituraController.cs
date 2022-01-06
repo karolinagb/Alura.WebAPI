@@ -23,6 +23,7 @@ namespace Alura.ListaLeitura.Api.Controllers
             _repo = repo;
         }
 
+        [HttpPost]
         private Lista CriarLista(TipoListaLeitura tipo)
         {
             return new Lista

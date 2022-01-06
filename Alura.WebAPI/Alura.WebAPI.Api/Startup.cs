@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Linq;
 using System.Text;
 
 namespace Alura.WebAPI.Api
@@ -61,7 +62,10 @@ namespace Alura.WebAPI.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Alura.WebAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AluraWebAPI", Version = "v1" });
+                //Esse codigo foi adicionado para resolver ações conflitantes que é quando ações estão
+                //usando a mesma rota
+                c.ResolveConflictingActions(x => x.First());
             });
 
             services.AddMvc(options =>
@@ -101,30 +105,31 @@ namespace Alura.WebAPI.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //Ativa o Swagger
-                app.UseSwagger();
-
-                // Ativa o Swagger UI
-                app.UseSwaggerUI(opt =>
-                {
-                    opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Alura.WebAPI V1");
-                    opt.RoutePrefix = string.Empty;
-                });
             }
             else
             {
                 app.UseExceptionHandler("/Error");
             }
+            //Ativa o Swagger
+            app.UseSwagger();
 
-            
+            // Ativa o Swagger UI
+            app.UseSwaggerUI(opt =>
+            {
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "AluraWebAPIV1");
 
+            });
 
             app.UseStaticFiles();
+
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            
 
             app.UseEndpoints(endpoints =>
             {
