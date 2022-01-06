@@ -66,7 +66,7 @@ namespace Alura.WebAPI.Api
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "AluraWebAPI", Version = "2.0" });
                 //Esse codigo foi adicionado para resolver ações conflitantes que é quando ações estão
                 //usando a mesma rota
-                c.ResolveConflictingActions(x => x.First());
+                //c.ResolveConflictingActions(x => x.First());
             });
 
             services.AddMvc(options =>

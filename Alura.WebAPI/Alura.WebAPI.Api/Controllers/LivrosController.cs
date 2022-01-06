@@ -11,6 +11,9 @@ namespace Alura.ListaLeitura.Api.Controllers
     [Authorize]
     [ApiController]
     [ApiVersion("1.0")]
+    //Dizer o que deve aparecer no documento. No caso esse controlador é o que vai aparecer para o doc
+    //swagger v1
+    [ApiExplorerSettings(GroupName = "v1")]
     [Route("api/v{version:apiVersion}/[controller]")]
     //Para suportar o versionamento por query string tiramos o {version} pois por padrão ele ja entende que a versao sera
     //informada na query string
