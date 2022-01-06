@@ -1,5 +1,6 @@
 ﻿using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
+using Alura.WebAPI.Api.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
@@ -35,6 +36,10 @@ namespace Alura.ListaLeitura.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        //Podemos dizer o que vai ser retornado no swagger:
+        [ProducesResponseType(statusCode: 200, Type = typeof(LivroApi))]
+        [ProducesResponseType(statusCode: 500, Type = typeof(ErrorResponse))]
+        [ProducesResponseType(statusCode: 404)]
         public IActionResult Recuperar(int id)
         {
             var model = _repo.Find(id);
