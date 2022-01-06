@@ -33,7 +33,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "ListaLivros",
                 Tags = new[] { "Livros" }
          )]
-        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao,
+        public IActionResult ListaDeLivros([FromQuery, SwaggerParameter(" LivroFiltro filtro ", Required = true)] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao,
             [FromQuery] LivroPaginacao paginacao)
         {
             var livroPaginado = _repo.All

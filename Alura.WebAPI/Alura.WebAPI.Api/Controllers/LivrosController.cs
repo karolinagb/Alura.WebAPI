@@ -4,6 +4,7 @@ using Alura.WebAPI.Api.Modelos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
@@ -36,6 +37,11 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "ListaLivros",
                 Tags = new[] { "Livros" }
          )]
+        [SwaggerResponse(200, "Livros retornados com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(404, "Nenhum livro foi encontrado")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei o que está enviando no request")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         public IActionResult ListaDeLivros()
         {
             var lista = _repo.All.Select(l => l.ToApi()).ToList();
@@ -51,6 +57,11 @@ namespace Alura.ListaLeitura.Api.Controllers
                 Tags = new[] { "Livros" }
          )]
         //Podemos dizer o que vai ser retornado no swagger:
+        [SwaggerResponse(200, "Livro retornados com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(404, "Livro não encontrado")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei se está informando parâmetros válidos")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         [ProducesResponseType(statusCode: 200, Type = typeof(LivroApi))]
         [ProducesResponseType(statusCode: 500, Type = typeof(ErrorResponse))]
         [ProducesResponseType(statusCode: 404)]
@@ -72,6 +83,11 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "RecuperaImagemCapaLivro",
                 Tags = new[] { "Livros" }
          )]
+        [SwaggerResponse(200, "Imagem de capa retornados com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(404, "Imagem de capa não encontrada")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei se está informando parâmetros válidos")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         public IActionResult ImagemCapa(int id)
         {
             byte[] img = _repo.All
@@ -93,6 +109,10 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "IncluiLivro",
                 Tags = new[] { "Livros" }
          )]
+        [SwaggerResponse(200, "Livro cadastrado com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei se está informando parâmetros válidos")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         public IActionResult Incluir([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)
@@ -113,6 +133,11 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "AlteraLivro",
                 Tags = new[] { "Livros" }
          )]
+        [SwaggerResponse(200, "Livro alterado com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(404, "Livro não encontrado")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei se está informando parâmetros válidos")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         public IActionResult Alterar([FromForm] LivroUpload model)
         {
             if (ModelState.IsValid)
@@ -139,6 +164,11 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "RemoveLivro",
                 Tags = new[] { "Livros" }
          )]
+        [SwaggerResponse(200, "Livro removido com sucesso", typeof(List<LivroApi>))]
+        [SwaggerResponse(401, "Usuário não autorizado")]
+        [SwaggerResponse(404, "Livro não encontrado não encontrada")]
+        [SwaggerResponse(400, "Falha na requisição. Verifiquei se está informando parâmetros válidos")]
+        [SwaggerResponse(500, "Erro de Servidor. Tente novamente mais tarde")]
         public IActionResult Remover(int id)
         {
             var model = _repo.Find(id);
