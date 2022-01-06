@@ -1411,22 +1411,6 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "Alura.WebAPI.Api/1.0.0": {
-        "dependencies": {
-          "Alura.WebAPI.DAL.Livros": "1.0.0",
-          "Alura.WebAPI.Model": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
-          "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
-          "System.IdentityModel.Tokens.Jwt": "6.15.0",
-          "System.Linq.Dynamic.Core": "1.2.15"
-        },
-        "runtime": {
-          "Alura.WebAPI.Api.dll": {}
-        },
-        "compile": {
-          "Alura.WebAPI.Api.dll": {}
-        }
-      },
       "Alura.WebAPI.DAL.Livros/1.0.0": {
         "dependencies": {
           "Alura.WebAPI.Model": "1.0.0",
@@ -3118,6 +3102,17 @@
           "WindowsBase.dll": {}
         },
         "compileOnly": true
+      },
+      "Alura.WebAPI.Api/1.0.0": {
+        "dependencies": {
+          "Alura.WebAPI.DAL.Livros": "1.0.0",
+          "Alura.WebAPI.Model": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13",
+          "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
+          "System.IdentityModel.Tokens.Jwt": "6.15.0",
+          "System.Linq.Dynamic.Core": "1.2.15"
+        },
+        "compileOnly": true
       }
     }
   },
@@ -3875,11 +3870,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "Alura.WebAPI.Api/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Alura.WebAPI.DAL.Livros/1.0.0": {
       "type": "project",
@@ -5268,6 +5258,11 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Alura.WebAPI.Api/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

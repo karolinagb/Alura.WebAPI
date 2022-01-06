@@ -5,12 +5,12 @@ using Alura.WebAPI.Api.Filtros;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Text;
 
@@ -59,6 +59,11 @@ namespace Alura.WebAPI.Api
                 };
             });
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Alura.WebAPI", Version = "v1" });
+            });
+
             services.AddMvc(options =>
             {
                 //Adicionando formatos personalizados ao pipeline
@@ -96,11 +101,23 @@ namespace Alura.WebAPI.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //Ativa o Swagger
+                app.UseSwagger();
+
+                // Ativa o Swagger UI
+                app.UseSwaggerUI(opt =>
+                {
+                    opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Alura.WebAPI V1");
+                    opt.RoutePrefix = string.Empty;
+                });
             }
             else
             {
                 app.UseExceptionHandler("/Error");
             }
+
+            
+
 
             app.UseStaticFiles();
 

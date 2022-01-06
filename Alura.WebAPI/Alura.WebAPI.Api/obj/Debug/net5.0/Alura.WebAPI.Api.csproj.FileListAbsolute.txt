@@ -125,3 +125,7 @@ C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Alura.We
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.WebAPI.Api.csproj.CopyComplete
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\obj\Debug\net5.0\Alura.WebAPI.Api.genruntimeconfig.cache
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
