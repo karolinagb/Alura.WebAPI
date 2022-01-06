@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Alura.WebAPI.Api
 {
@@ -68,6 +69,10 @@ namespace Alura.WebAPI.Api
                 //usando a mesma rota
                 //c.ResolveConflictingActions(x => x.First());
                 c.EnableAnnotations();
+                //descrevendo enumerados como strings
+                c.UseInlineDefinitionsForEnums();
+                c.DescribeAllParametersInCamelCase();
+
             });
 
             services.AddMvc(options =>
@@ -76,7 +81,8 @@ namespace Alura.WebAPI.Api
                 options.OutputFormatters.Add(new LivroCsvFormatter());
                 //Informar que estou usando esse filtro de exceções
                 options.Filters.Add(typeof(ErrorResponseFilter));
-            }).AddXmlSerializerFormatters();
+            }).AddXmlSerializerFormatters()
+            .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
             //Mudando a configuração padrão da api do .NET a fim dela não fazer a validação automática do ModelState
             //Dessa forma conseguimos utilizar a nossa própria validação do ModelState
