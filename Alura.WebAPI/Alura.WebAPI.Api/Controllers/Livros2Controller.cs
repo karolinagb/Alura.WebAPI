@@ -15,7 +15,6 @@ namespace Alura.ListaLeitura.Api.Controllers
     [ApiExplorerSettings(GroupName = "v2")]
     [Route("api/v{version:apiVersion}/[controller]")]
     //[Route("api/[controller]")]
-
     public class Livros2Controller : ControllerBase
     {
         private readonly IRepository<Livro> _repo;

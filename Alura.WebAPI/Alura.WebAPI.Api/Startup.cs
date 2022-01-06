@@ -2,6 +2,7 @@ using Alura.ListaLeitura.Api.Formatters;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Alura.WebAPI.Api.Filtros;
+using Alura.WebAPI.Api.HttpClients;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -69,10 +71,21 @@ namespace Alura.WebAPI.Api
                 //usando a mesma rota
                 //c.ResolveConflictingActions(x => x.First());
                 c.EnableAnnotations();
-                //descrevendo enumerados como strings
-                c.UseInlineDefinitionsForEnums();
-                c.DescribeAllParametersInCamelCase();
+                //documentando a autorização
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    //Onde o token sera enviado
+                    In = ParameterLocation.Header,
+                    //Tipo de mecanismo
+                    Type = SecuritySchemeType.ApiKey,
+                    Description = "Autenticação Bearer via JWT"
+                });
+            });
 
+            services.AddHttpClient<AuthApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("http://localhost:5000/api/");
             });
 
             services.AddMvc(options =>
@@ -86,7 +99,7 @@ namespace Alura.WebAPI.Api
 
             //Mudando a configuração padrão da api do .NET a fim dela não fazer a validação automática do ModelState
             //Dessa forma conseguimos utilizar a nossa própria validação do ModelState
-            services.Configure<ApiBehaviorOptions>(options => 
+            services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
@@ -138,7 +151,7 @@ namespace Alura.WebAPI.Api
             app.UseAuthentication();
             app.UseAuthorization();
 
-            
+
 
             app.UseEndpoints(endpoints =>
             {

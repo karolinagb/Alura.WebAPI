@@ -130,3 +130,12 @@ C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuc
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Alura.WebAPI.DAL.Usuarios.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Alura.WebAPI.DAL.Usuarios.pdb
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Alura.WebAPI.Seguranca.dll
+C:\projetos\Alura.WebAPI\Alura.WebAPI\Alura.WebAPI.Api\bin\Debug\net5.0\Alura.WebAPI.Seguranca.pdb
