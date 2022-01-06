@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oH/Tw1sdH4wOR/pDgt/OUVdy8P1SPvqfU1fHG1RwAdEr+F9zf1qGXHsG8EemzxR3kxfoyROG1CdtZsDeOK1tqQ==",
+  "dgSpecHash": "+iFF/Kwxx+AqamecQ9xrHGZjPc2kKId3d8LmxlkbIrOLxZaObZ6SKjX5HDYHJZ6GtiIlCQ+zsStcEQKxK9Ry0A==",
   "success": true,
   "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,7 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\5.0.2\\microsoft.visualstudio.web.codegeneration.5.0.2.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\5.0.2\\microsoft.visualstudio.web.codegeneration.contracts.5.0.2.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\5.0.2\\microsoft.visualstudio.web.codegeneration.core.5.0.2.nupkg.sha512",
@@ -80,6 +81,9 @@
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.2.3\\swashbuckle.aspnetcore.annotations.6.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

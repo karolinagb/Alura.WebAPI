@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "lnqi47JZ+dj5TvyKYzhZYds+cLNaODUEIZ74pwykYEl8y1AJDY5PqYsJPRS0d3H/j62eEbQYxZQp1ek4M6Mbhg==",
+  "dgSpecHash": "kFw7sp/DkCNshIlDm9ocHsAAVDFnWCKYTqx7jLtJ6bK56ExMdrMerGOKEVVjsIdRVckfAMt/zqwnDMIwk2qCVg==",
   "success": true,
   "projectFilePath": "C:\\projetos\\Alura.WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.2.3\\swashbuckle.aspnetcore.annotations.6.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Karol\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Karol\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
   "logs": []

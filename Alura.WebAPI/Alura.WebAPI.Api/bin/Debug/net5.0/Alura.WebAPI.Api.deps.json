@@ -1352,7 +1352,8 @@
       },
       "Alura.WebAPI.Model/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+          "Microsoft.AspNetCore.Http.Features": "5.0.12",
+          "Swashbuckle.AspNetCore.Annotations": "6.2.3"
         },
         "runtime": {
           "Alura.WebAPI.Model.dll": {}

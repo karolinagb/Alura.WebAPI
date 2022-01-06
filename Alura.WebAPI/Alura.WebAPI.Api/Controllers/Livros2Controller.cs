@@ -33,7 +33,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "ListaLivros",
                 Tags = new[] { "Livros" }
          )]
-        public IActionResult ListaDeLivros([FromQuery, SwaggerParameter(" LivroFiltro filtro ", Required = true)] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao,
+        public IActionResult ListaDeLivros([FromQuery] LivroFiltro filtro, [FromQuery] LivroOrdem ordenacao,
             [FromQuery] LivroPaginacao paginacao)
         {
             var livroPaginado = _repo.All
@@ -52,7 +52,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 OperationId = "RecuperaPorId",
                 Tags = new[] { "Livros" }
          )]
-        public IActionResult Recuperar(int id)
+        public IActionResult Recuperar([SwaggerParameter("Id do livro a ser obtido")] int id)
         {
             var model = _repo.Find(id);
             if (model == null)

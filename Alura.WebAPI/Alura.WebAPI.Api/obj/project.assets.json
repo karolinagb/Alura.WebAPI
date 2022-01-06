@@ -1519,7 +1519,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+          "Microsoft.AspNetCore.Http.Features": "5.0.12",
+          "Swashbuckle.AspNetCore.Annotations": "6.2.3"
         },
         "compile": {
           "bin/placeholder/Alura.WebAPI.Model.dll": {}
