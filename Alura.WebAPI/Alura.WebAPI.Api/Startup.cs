@@ -57,7 +57,7 @@ namespace Alura.WebAPI.Api
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("alura-webapi-authentication-valid")),
-                    ClockSkew = TimeSpan.FromMinutes(5),
+                    ClockSkew = TimeSpan.FromMinutes(30),
                     ValidIssuer = "Alura.WebApp",
                     ValidAudience = "Postman",
                 };
@@ -75,10 +75,12 @@ namespace Alura.WebAPI.Api
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
                     //Onde o token sera enviado
                     In = ParameterLocation.Header,
                     //Tipo de mecanismo
-                    Type = SecuritySchemeType.ApiKey,
                     Description = "Autenticação Bearer via JWT"
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement()
@@ -164,10 +166,8 @@ namespace Alura.WebAPI.Api
             //app.UseHttpsRedirection();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
 
 
             app.UseEndpoints(endpoints =>

@@ -28,7 +28,7 @@ namespace Alura.WebAPI.Api.Controllers
         [HttpPost]
         public async Task<LoginResult> Login(LoginModel model)
         {
-                var result = await _auth.PostLoginAsync(model);
+            var result = await _auth.PostLoginAsync(model);
             return result;
         }
     }
